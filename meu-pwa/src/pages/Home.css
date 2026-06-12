@@ -1,0 +1,146 @@
+.perfil {
+  max-width: 980px;
+  margin: 40px auto;
+  padding: 28px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(145, 118, 255, 0.16);
+  border-radius: 32px;
+  box-shadow: 0 28px 70px rgba(70, 45, 153, 0.12);
+  backdrop-filter: blur(18px);
+}
+
+.perfil-topo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 28px;
+  border-radius: 28px;
+  background: linear-gradient(135deg, rgba(111, 69, 255, 0.08), rgba(255, 255, 255, 0.9));
+  border: 1px solid rgba(111, 69, 255, 0.14);
+}
+
+.perfil-topo img {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(111, 69, 255, 0.2);
+  background: #ffffff;
+  padding: 10px;
+}
+
+.perfil-topo h2 {
+  margin: 0;
+  font-size: 2rem;
+  color: #2e1d69;
+}
+
+.perfil-topo p {
+  margin: 6px 0 0;
+  color: #6d6188;
+  font-size: 0.98rem;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid rgba(145, 118, 255, 0.12);
+  border-radius: 26px;
+  padding: 26px;
+  box-shadow: 0 18px 36px rgba(96, 63, 193, 0.1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 24px 50px rgba(96, 63, 193, 0.15);
+}
+
+.card h3 {
+  margin: 0 0 14px;
+  font-size: 1.05rem;
+  color: #4b368f;
+}
+
+.card p,
+.card li {
+  color: #5d5470;
+  line-height: 1.75;
+  font-size: 0.98rem;
+}
+
+.card ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  list-style: disc;
+  display: grid;
+  gap: 10px;
+}
+
+.card button {
+  margin-top: 18px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 999px;
+  color: #ffffff;
+  background: linear-gradient(135deg, #6f45ff, #8b5cff);
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 16px 28px rgba(111, 69, 255, 0.22);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.card button:hover {
+  transform: translateY(-1px);
+  background: linear-gradient(135deg, #5e33db, #7b4af8);
+}
+
+.card button:focus-visible {
+  outline: 3px solid rgba(111, 69, 255, 0.3);
+  outline-offset: 3px;
+}
+
+.card:last-child {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  min-height: 130px;
+}
+
+.card:last-child button {
+  width: 100%;
+  max-width: 220px;
+}
+
+@media (min-width: 900px) {
+  .perfil {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .perfil-topo {
+    grid-column: 1 / -1;
+  }
+
+  .card:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 780px) {
+  .perfil {
+    padding: 22px;
+    gap: 16px;
+  }
+
+  .perfil-topo {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .card:last-child {
+    justify-content: center;
+    min-height: auto;
+  }
+}
